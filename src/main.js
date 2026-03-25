@@ -189,7 +189,7 @@ document.querySelector('#app').innerHTML = `
         <p>
           chaque pokemon c'est un objet avec plein de proprietes : <strong>name</strong>, <strong>type</strong>, <strong>hp</strong>, <strong>attack</strong>...
           j'y accede avec un point : <strong>pokemon.name</strong>, <strong>pokemon.type</strong>.
-          et j'ai vu que <strong>type</strong> c'est un tableau, genre <em>["fire", "flying"]</em>
+          et j'ai vu que <strong>type</strong> c'est un tableau, genre <em>["Fire", "flying"]</em>
         </p>
       </div>
 
@@ -270,8 +270,8 @@ document.querySelector('#app').innerHTML = `
         <div class="info-box-title">comment j'ai trouve .filter() et .includes()</div>
         <p>
           <strong>.filter()</strong> ca retourne un nouveau tableau avec seulement les elements qui passent ma condition.
-          et comme <strong>type</strong> c'est un tableau, j'utilise <strong>.includes()</strong> pour tester si "fire" est dedans.
-          genre <em>["fire", "flying"].includes("fire")</em> ca retourne <em>true</em>.
+          et comme <strong>type</strong> c'est un tableau, j'utilise <strong>.includes()</strong> pour tester si "Fire" est dedans.
+          genre <em>["Fire", "Flying"].includes("Fire")</em> ca retourne <em>true</em>.
         </p>
       </div>
 
@@ -286,8 +286,8 @@ document.querySelector('#app').innerHTML = `
 
   <span class="cmt">// .filter() me retourne un nouveau tableau - seulement les feu</span>
   <span class="kw">const</span> <span class="var">pokemonsFeu</span> = <span class="var">pokemons</span>.<span class="met">filter</span>(<span class="var">pokemon</span> => {
-    <span class="kw">return</span> <span class="var">pokemon</span>.<span class="met">type</span>.<span class="met">includes</span>(<span class="str">'fire'</span>)
-    <span class="cmt">//      ^ mon tableau de types   ^ est-ce que fire est dedans ?</span>
+    <span class="kw">return</span> <span class="var">pokemon</span>.<span class="met">type</span>.<span class="met">includes</span>(<span class="str">'Fire'</span>)
+    <span class="cmt">//      ^ mon tableau de types   ^ est-ce que Fire est dedans ?</span>
   })
 
   <span class="fn">console</span>.<span class="met">log</span>(<span class="var">pokemonsFeu</span>)
@@ -333,7 +333,7 @@ document.querySelector('#app').innerHTML = `
 
   <span class="cmt">// j'enchaine filter puis sort</span>
   <span class="kw">const</span> <span class="var">resultat</span> = <span class="var">pokemons</span>
-    .<span class="met">filter</span>(<span class="var">pokemon</span> => <span class="var">pokemon</span>.<span class="met">type</span>.<span class="met">includes</span>(<span class="str">'fire'</span>))   <span class="cmt">// 1. je garde les feu</span>
+    .<span class="met">filter</span>(<span class="var">pokemon</span> => <span class="var">pokemon</span>.<span class="met">type</span>.<span class="met">includes</span>(<span class="str">'Fire'</span>))   <span class="cmt">// 1. je garde les feu</span>
     .<span class="met">sort</span>((<span class="var">a</span>, <span class="var">b</span>) => <span class="var">b</span>.<span class="met">attack</span> - <span class="var">a</span>.<span class="met">attack</span>)            <span class="cmt">// 2. je trie par attaque decroissante</span>
 
   <span class="kw">for</span> (<span class="kw">const</span> <span class="var">pokemon</span> <span class="kw">of</span> <span class="var">resultat</span>) {
@@ -475,7 +475,7 @@ function afficherEtape6() {
   const container = document.getElementById('result-etape6')
 
   const pokemonsFeu = pokemons.filter(pokemon => {
-    return pokemon.type.includes('fire')
+    return pokemon.type.includes('Fire')
   })
 
   let html = `<p style="color:var(--muted);font-size:13px;margin-bottom:16px">
@@ -508,7 +508,7 @@ function afficherEtape7() {
   const container = document.getElementById('result-etape7')
 
   const resultat = pokemons
-    .filter(pokemon => pokemon.type.includes('fire'))
+    .filter(pokemon => pokemon.type.includes('Fire'))
     .sort((a, b) => b.attack - a.attack)
 
   const maxAtk = resultat[0]?.attack || 1
