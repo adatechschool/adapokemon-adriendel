@@ -240,7 +240,7 @@ document.querySelector('#app').innerHTML = `
   <span class="kw">for</span> (<span class="kw">const</span> <span class="var">pokemon</span> <span class="kw">of</span> <span class="var">pokemons</span>) {
     <span class="fn">console</span>.<span class="met">log</span>(
       <span class="var">pokemon</span>.<span class="met">name</span>,       <span class="cmt">// ex: "Charmander"</span>
-      <span class="var">pokemon</span>.<span class="met">type</span>,       <span class="cmt">// ex: ["fire"]</span>
+      <span class="var">pokemon</span>.<span class="met">type</span>,       <span class="cmt">// ex: ["Fire"]</span>
       <span class="var">pokemon</span>.<span class="met">attack</span>      <span class="cmt">// ex: 52</span>
     )
   }
